@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const clientId = process.env.NEXT_PUBLIC_UNSPLASH_CLIENT_ID;
 
@@ -21,7 +22,8 @@ export default function ImagesPage() {
 
   return (
     <div>
-      <h2>Will this post an image?</h2>
+      <Link href="/">Home</Link>
+      <h2>Will this post two images?</h2>
       {images.map((image) => (
         <div key={image.id}>
           <Image
